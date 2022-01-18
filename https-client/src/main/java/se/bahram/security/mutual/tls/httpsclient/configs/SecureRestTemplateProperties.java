@@ -6,6 +6,9 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class SecureRestTemplateProperties {
     String trustStore;
     char[] trustStorePassword;
+    String keyStore;
+    char[] keyPassword;
+    char[] keyStorePassword;
 
     public String getTrustStore() {
         return trustStore;
@@ -21,5 +24,29 @@ public class SecureRestTemplateProperties {
 
     public void setTrustStorePassword(char[] trustStorePassword) {
         this.trustStorePassword = trustStorePassword;
+    }
+
+    public String getKeyStore() {
+        return keyStore;
+    }
+
+    public void setKeyStore(String keyStore) {
+        this.keyStore = keyStore;
+    }
+
+    public char[] getKeyPassword() {
+        return keyPassword;
+    }
+
+    public void setKeyPassword(char[] keyPassword) {
+        this.keyPassword = keyPassword;
+    }
+
+    public char[] getKeyStorePassword() {
+        return keyStorePassword;
+    }
+
+    public void setKeyStorePassword(char[] keyStorePassword) {
+        this.keyStorePassword = keyStorePassword;
     }
 }

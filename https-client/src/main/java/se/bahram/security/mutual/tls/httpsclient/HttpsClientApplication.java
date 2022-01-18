@@ -36,6 +36,7 @@ public class HttpsClientApplication implements CommandLineRunner {
 
         SSLContext sslContext = new SSLContextBuilder()
                 .loadTrustMaterial(new ClassPathResource(properties.getTrustStore()).getFile(), properties.getTrustStorePassword())
+                .loadKeyMaterial(new ClassPathResource(properties.getKeyStore()).getFile(), properties.getKeyStorePassword(), properties.getKeyPassword())
                 .setProtocol("TLSv1.3")
                 .build();
 
